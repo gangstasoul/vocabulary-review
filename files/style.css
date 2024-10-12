@@ -257,7 +257,8 @@ transform:translate(-50%,0)}
 .final-result-number{font-size:36px;font-weight:bold;color:red;}
 .clickTo{position:relative;padding-left:20px;padding-right:20px;font-size:20px;font-weight: bold;}
 .clickTo-2{position:relative;padding-left:20px;padding-right:20px;font-size:30px;font-weight: bold;}
-.show-button{text-align:center;margin-bottom:60px;}
+.show-button{text-align:center;}
+.show-button-2{text-align:center;margin-bottom:60px;}
 .under-title{}
 .under-result{margin-left:45px}
 .under-result-2{margin-left:60px}
