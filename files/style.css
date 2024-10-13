@@ -326,14 +326,14 @@ border:1px;border-width:1px;border-radius:.375rem;padding: 5px;margin-right:0px;
 	background: #14a3b5;
 	z-index:101;
 }
-	 
-    .b-video__icon_btn{display:inline-block;width:30px;height:24px;background:center no-repeat}
+	.total-score{width:200px;height:auto;Background:#f8cc40;margin-left:-50%;margin-top:15%;color:#ca3f35;font-size:36px;padding:10px 0px;}
 	.word_2 {font-size: 40px!important;cursor:pointer;}
 	.puzzle_solved .word_2 {font-size: 30px!important;cursor:pointer;}
 	.puzzle-hole {position: absolute!important;width:auto!important;padding:0px!important;}
 	.sentence-span{width:100%;display:block;font-size:25px;direction:ltr!important}
 	.puzzle-new-header{z-index:102!important;}
 	.video_wrap .pe_play-button{background:url(../media/play.png) center no-repeat #50b46f;}
+	.b-video__icon_btn{display:inline-block;width:30px;height:24px;background:center no-repeat}
 		
 
 @media (min-height: 1px) and (max-width: 1220px) {
@@ -343,5 +343,5 @@ border:1px;border-width:1px;border-radius:.375rem;padding: 5px;margin-right:0px;
 	@media (max-width: 768px) {
   video {width: 100%;height: auto;}
 }
-	.test-element{width:200px;height:40px;Background:#f8cc40;margin-left:-50%;margin-top:15%;color:#ca3f35;font-size:36px;padding:10px 0px;}
+	
 	

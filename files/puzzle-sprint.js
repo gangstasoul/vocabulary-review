@@ -1453,7 +1453,7 @@ $(function() {
 	  var totalResult = number1 + number2;
 	  var totalScore = document.createElement("div");
 	  totalScore.id = 'myDivId';
-	  totalScore.className = 'test-element';
+	  totalScore.className = 'total-score';
 	  totalScore.textContent = `Total: ${totalResult}`;
 	  
 	  imageElement.src = './media/Blue-team.png';
