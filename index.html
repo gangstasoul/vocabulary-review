@@ -45,36 +45,38 @@
 <link rel="stylesheet" type="text/css" href="./files/style(4).css">	
 
 <style>
-    @media (min-height: 1px) and (max-width: 1450px) {
-	.b-sprint__clock {left: 46%;}
-	}
-    @media (min-height: 1px) and (max-width: 1220px) {
+    @media (min-height: 1px) and (max-width: 1200px) {
 	.b-game__field {height: 410px;}
-	.container-fluid{margin-left: -5px}
+	.container-fluid{margin-left:-5px; margin-top: 0px;}
+	.unit-right{margin-top: 8px;}
 	.puzzle-subheader{background:none;margin-top: 0px;}
-	.b-sprint__table{background:none;margin-top: -55px;}
-	.b-sprint__clock {left: 45%;	}
+	.b-sprint__table{background:none;margin-top: -40px;}
+	.b-sprint__clock {margin-top: -10px;}
     .progressbar_wrap{margin-left:30px;}
     .b-sprint__wrapper{background:none!important;margin-top: 2px;}
 	.b-field__body {padding-top:30px;}
 	.b-field__words {margin-bottom:10px}
 	.img-regular{margin-bottom: 25px;}
-	.unit-right{background:none;margin-top: -50px;}
 	.b-sprint__sidebar_right {margin-right: 120px;margin-top: -3px;}
 	.b-sprint__sidebar_left {margin-left: 120px;margin-top: -3px;}
     .allkeys{display:none;}
 	.sidebar_points{opacity: 0;}
 	}
-     @media (min-height: 800px) and (max-width: 1000px){
+	
+	@media (min-height: 1px) and (max-width: 1100px) {
+	.b-sprint__clock {left: 45.2%;}
+	}
+     @media (min-height: 600px) and (max-width: 1000px){
+	 .b-sprint__clock {margin-top: -2%;}
 	 #tr{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-webkit-flex:0 1 auto;-ms-flex:0 1 auto;flex:0 1 auto;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
-	.b-sprint__wrapper{margin-left: 250px;margin-top: 24%;transform: scale(1.6)}
+	.b-sprint__wrapper{margin-left: 240px;margin-top: 24%;transform: scale(1.6)}
 	.b-sprint__body{margin-bottom: 20%;}
 	.show-button-2{margin-top: 20%;}
 	#StartButton{transform: scale(1.5);margin-top: 20px;margin-left: 50px;}
 	
-	
-	@media  (max-height: 1300px){
-	.b-sprint__wrapper{margin-left: 150px;}
+	@media  (min-height: 1100px) and (max-width: 860px) {
+	.b-sprint__clock {margin-top: -4%;}
+	.b-sprint__wrapper{margin-left: 150px;}	
 	}	
 }
    #word-game {cursor: url('./media/gam1569.cur'), pointer;}  
@@ -116,7 +118,7 @@
             <div class="redesign-header__submenu-num">
             </div>
           </a>
-          <a href="https://gangstasoul.github.io/video_puzzle/" class="redesign-header__upd-submenu-item" target="_blank" itemprop="url">
+          <a href="https://gangstasoul.github.io/biodiversity/Biodiversity-2.html" class="redesign-header__upd-submenu-item" target="_blank" itemprop="url">
             <div class="redesign-header__upd-submenu-item-icon">  
               <div class="redesign-header__submenu-icon puzzle-icon" style="width: 38px; height: 20px;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="20" viewBox="0 0 38 20">
@@ -130,7 +132,7 @@
             <div class="redesign-header__submenu-num">
             </div>
           </a>
-		  <a href="https://gangstasoul.github.io/video_puzzle/" class="redesign-header__upd-submenu-item" target="_blank" itemprop="url">
+		  <a href="https://gangstasoul.github.io/biodiversity/Biodiversity-3.html" class="redesign-header__upd-submenu-item" target="_blank" itemprop="url">
             <div class="redesign-header__upd-submenu-item-icon">  
               <div class="redesign-header__submenu-icon puzzle-icon" style="width: 38px; height: 20px;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="20" viewBox="0 0 38 20">
@@ -152,7 +154,7 @@
             Vocabulary
         </a>
         <div class="redesign-header__upd-menu-submenu" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ItemList" style="display: none;"> 
-		            <a href="https://gangstasoul.github.io/Duel_of_minds-2/" class="redesign-header__upd-submenu-item" target="_blank" itemprop="url">
+		            <a href="https://github.com/gangstasoul/vocabulary-animals" class="redesign-header__upd-submenu-item" target="_blank" itemprop="url">
             <div class="redesign-header__upd-submenu-item-icon">
               <div class="redesign-header__submenu-icon puzzle-icon" style="width: 32px; height: 26px;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
@@ -169,7 +171,7 @@
 </svg>           </div>
             </div>
             <div class="redesign-header__submenu-title">
-              Vocabulary <br>part 1
+              Vocabulary Animals
             </div>
           </a>
         </div>
@@ -220,7 +222,7 @@
 			        </div>
 
 
-<div id="sprint-game">
+<div id="sprint-game" oncontextmenu="return false";>
    
 	<div class="puzzle-subheader puzzle-subheader_listening puzzle-subheader_style_lightgrey">
     <div class="container-fluid">
@@ -260,9 +262,9 @@
 							
 				
             </div>
-			
-			<div id="refreshable" class="b-sprint__clock" onclick="refreshElement(self)">
-                <div class="b-timer">
+			<div style="position:relative; margin-top:-5%;">
+			<div id="b-sprint__clock" class="b-sprint__clock" onclick="refreshElement(self)">
+                <div id="b-timer" class="b-timer">
                     <svg class="b-timer__watch-svg" data-fill="100" version="1.1" width="300px" height="300px" viewBox="0 0 600 600" text-rendering="auto">
                         <g class="centerGroup" transform="rotate(-90, 300, 300)">
 						 <circle fill="#fff" stroke="#f8d946" stroke-width="5" stroke-miterlimit="10" cx="300" cy="300" r="79.2"></circle>
@@ -273,7 +275,7 @@
                     <div id="timer" class="b-timer__num">0</div>
                 </div>
             </div>
-			
+			</div>
           <div class="unit-right">
 		  <label for="dropdownMenu" class="drop-down">Timer:</label>
     <select id="dropdownMenu" class="drop-down">
@@ -308,7 +310,7 @@
 
             
 
-            <div class="b-game puzzle-sprint__main__box" data-correct="0" style="opacity: 1;"oncontextmenu="return false";>
+            <div class="b-game puzzle-sprint__main__box" data-correct="0" style="opacity: 1;">
                 <div class="b-game__field b-field">
                     <div id="word-game" class="b-field__body">
                         <div class="b-field__words puzzle-sprint__word playerSpan">
@@ -433,7 +435,7 @@ document.addEventListener('keydown', function(event) {
             </div>
 
             
- <div class="b-game puzzle-sprint2__main__box" data-correct="0" style="opacity: 1;" oncontextmenu="return false;">  
+ <div class="b-game puzzle-sprint2__main__box" data-correct="0" style="opacity: 1;">  
                 <div class="b-game__field b-field">
                     <div id="word-game2" class="b-field__body">
                         <div class="b-field__words puzzle-sprint2__word playerSpan">
