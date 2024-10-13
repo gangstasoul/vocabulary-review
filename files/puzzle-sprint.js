@@ -647,7 +647,7 @@ var PuzzleSprint = {
         $wrapper.append($square_template);
       }
       var $_circle = $($circle_template).clone();
-      $_circle.text('+' + this.values[this.stage].t);
+      $_circle.text('+' + this.values[this.stage].t + ' sec');
       $_circle.data('time', this.values[this.stage].t);
 
       $wrapper.append($_circle);
@@ -1318,7 +1318,7 @@ var PuzzleSprint2 = {
         $wrapper.append($square_template);
       }
       var $_circle = $($circle_template).clone();
-      $_circle.text('+' + this.values[this.stage].t);
+      $_circle.text('+' + this.values[this.stage].t + ' sec');
       $_circle.data('time', this.values[this.stage].t);
 
       $wrapper.append($_circle);
