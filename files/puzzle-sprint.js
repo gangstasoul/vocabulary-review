@@ -1423,8 +1423,7 @@ $(function() {
   var selectedTime = document.getElementById('dropdownMenu').value;
   var timer;
   if (selectedTime == 30){timer = 30}
-  else if (selectedTime == 40){timer = 40}
-  else if (selectedTime == 50){timer = 50}
+  else if (selectedTime == 45){timer = 45}
   else if (selectedTime == 60){timer = 60}
   else {timer = 30};
 

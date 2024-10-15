@@ -37,6 +37,7 @@
 <script type="text/javascript" src="./files/jquery.path.js"></script>
 <script type="text/javascript" src="./files//puzzle-sprint.js"></script>
 <script type="text/javascript" src="./files/redesign-header.js"></script>   
+<script type="text/javascript" src="./files/library-animals.js"></script>
  
 
 <link rel="stylesheet" type="text/css" href="./files/style.css">	  
@@ -45,49 +46,51 @@
 <link rel="stylesheet" type="text/css" href="./files/style(4).css">	
 
 <style>
-    #StartButton{top: 10px;}
 
-    @media (min-height: 1px) and (max-width: 1200px) {
-	.b-sprint__clock {margin-top: -1%;}
+@media (min-height: 1px) and (max-width: 1200px) {
+    .container-fluid{margin:-10px;}
+	.header-box{margin-top:5px;}
 	.b-game__field {height: 410px;}
-	.container-fluid{margin-left:-5px; margin-top: 0px;}
+    .b-field__words {margin-top: -30px;}
+	.b-sprint__clock {margin-top: -1.8%;margin-left:-1.3%;}
+	.b-sprint__body{margin-top: -28px;}
     .unit-right{top:10px;}
-	.puzzle-subheader{background:none;margin-top: 0px;}
-	.b-sprint__table{background:none;margin-top: 5px;}
     .progressbar_wrap{margin-left:30px;}
-    .b-sprint__wrapper{background:none!important;margin-top: 2px;}
-	.b-field__body {padding-top:30px;}
-	.b-field__words {margin-bottom:10px}
-	.img-regular{margin-bottom: 25px;}
 	.b-sprint__sidebar_right {margin-right: 120px;margin-top: -3px;}
 	.b-sprint__sidebar_left {margin-left: 120px;margin-top: -3px;}
+	.b-sprint__wrapper{background:none;}
     .allkeys{display:none;}
 	.sidebar_points{opacity: 0;}
-	
-	 @media  (min-height: 800px) and (max-width: 1200px) {
-	.b-sprint__clock {margin-top: 0%;}
-	.unit-right{top:30px;}
 	}
+
+	@media  (min-height: 800px) and (max-width: 1200px) {
+	.b-sprint__clock {margin-top: -15px!important;margin-left:-0.3%!important;}
 	}
-	
-	@media (min-height: 1px) and (max-width: 1100px) {
-	.b-sprint__clock {left: 45.2%;}
+	@media  (min-height: 760px) and (max-width: 1200px) {
+	.b-sprint__clock {margin-top: -1.5%;margin-left:-0.8%;}
 	}
+
      @media (min-height: 600px) and (max-width: 1000px){
-	 #tr{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-webkit-flex:0 1 auto;-ms-flex:0 1 auto;flex:0 1 auto;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
-	.b-sprint__wrapper{margin-left: 240px;margin-top: 24%;transform: scale(1.6)}
+	 .container-fluid{width:100%;}
 	.b-sprint__body{margin-bottom: 20%;}
-	.show-button-2{margin-top: 20%;}
+	.show-button-2{margin-top: 10%;}
 	#StartButton{transform: scale(1.5);top: 20px;margin-left: 50px;}
-	
-	@media  (min-height: 1100px) and (max-width: 860px) {
-	.b-sprint__wrapper{margin-left: 150px;}	
-	.b-sprint__clock {margin-top: -2%;}
-	}	
+	#sprint-game {margin: 20px;margin-top: 26%;transform: scale(1.6)}
+	#sprint-game2 {margin: 20px;margin-top: 17%;transform: scale(1.6)}	
 }
-   #word-game {cursor: url('./media/gam1569.cur'), pointer;}  
-   #word-game2 {cursor: url('./media/gam1570.cur'), pointer;}
+	
+   .container-flex {
+   width: 100vh;
+      padding: 10px;
+      display: flex;
+	  justify-content: center;
+	  align-items: 
+      gap: 2px;
+	
+	  
+    }
   </style>
+  
 </head>
 <body>
 
@@ -95,7 +98,7 @@
                  <div class="redesign-header__menu">
           <div class="redesign-header__menu-content">
 		  
-            <div class="container-fluid container-fluid-2">
+            <div class="container-fluid">
 			<img src="./media/logo.png" alt="" class="img-fluid-2">
 			
               <div class="redesign-header__menu-left_upd_2" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
@@ -228,10 +231,11 @@
 			        </div>
 
 
-<div id="sprint-game" oncontextmenu="return false";>
+
    
 	<div class="puzzle-subheader puzzle-subheader_listening puzzle-subheader_style_lightgrey">
-    <div class="container-fluid">
+	
+    <div class="container-fluid header-box">
         <div class="row middle-xs center-xs start-sm">
 		
 				<div class="puzzle_va_middle">
@@ -246,19 +250,15 @@
 	 var scriptRunning = false;
 	 
 	 document.getElementById('StartButton').addEventListener('click', (function() {
-	 
-	
 	 if (scriptRunning) {             
      reloadScript();  
 	 Span.textContent = 'Play';
 	 scriptRunning = false;
-            } else {
-               
+            } else {              
                 startScript()
 				Span.textContent = 'Refresh';
                 scriptRunning = true;
-            }
-			
+            }			
         }));
 	
     </script>
@@ -277,7 +277,7 @@
                             <circle class="b-timer__watch-svg-fill" fill="#fff" stroke="#f8d946" stroke-width="70" stroke-miterlimit="10" cx="300" cy="300" r="35" stroke-dasharray="100%" style="stroke-dashoffset: 63.04%;"></circle>      
                         </g>
                     </svg>
-                    <div class="b-timer__top"></div>
+                  
                     <div id="timer" class="b-timer__num">0</div>
                 </div>
             </div>
@@ -286,8 +286,7 @@
 		  <label for="dropdownMenu" class="drop-down">Timer:</label>
     <select id="dropdownMenu" class="drop-down">
         <option value="30">30</option>
-		<option value="40">40</option>
-		<option value="50">50</option>
+		<option value="45">45</option>
 		<option value="60">60</option>
         
     </select>	
@@ -298,15 +297,14 @@
     </div>
 </div>
 
-  <div class="container-fluid">
-    
-<table id="b-sprint__table" class="b-sprint__table">
 
-<tbody>
-<tr id="tr">
-<td>
- 
-<div class="b-sprint__wrapper">
+  <div class="container-fluid game-box" >oncontextmenu="return false";
+    <div class="row middle-xs center-xs start-sm " style="justify-content: center;">
+
+
+
+<div id="sprint-game" class="">
+
     <div class="l-wrapper">
         <div class="b-sprint__body">
             <div class="b-sprint__progressbar b-progressbar">
@@ -422,13 +420,8 @@ document.addEventListener('keydown', function(event) {
         </div>
     </div>
 </div>
-
-<script type="text/javascript" src="./files/library-player-1.js"></script>
-
 </div>
 
-</td>
-<td>
 
 <div id="sprint-game2">
     
@@ -440,7 +433,7 @@ document.addEventListener('keydown', function(event) {
             </div>
 
             
- <div class="b-game puzzle-sprint2__main__box" data-correct="0" style="opacity: 1;">  
+ <div class="b-game puzzle-sprint__main__box" data-correct="0" style="opacity: 1;">  
                 <div class="b-game__field b-field">
                     <div id="word-game2" class="b-field__body">
                         <div class="b-field__words puzzle-sprint2__word playerSpan">
@@ -542,17 +535,15 @@ document.addEventListener('keydown', function(event) {
     </div>
 </div>
 
-<script type="text/javascript" src="./files/library-player-2.js"></script>
 
 </div>
 
+ </div>
+ 
+ </div>
 
-</td>
-</tr>
-</tbody>
- </table>
- </div>
- </div>
+
+
 
 <div class="show-button-2">
 <div style="width:50%; float:left">
@@ -605,28 +596,21 @@ document.addEventListener('keydown', function(event) {
 
 <script>var new_game = 1; var danetka_allowed = 1;</script>
 
-</div>
+
 
 <script>
-// Function to update the variable and localStorage based on the dropdown selection
 function updateValue(event) {
     const selectedValue = event.target.value;
     localStorage.setItem('selectedValue', selectedValue);
     console.log(`Selected value is now: ${selectedValue}`);
 }
-
-// Function to initialize the dropdown based on localStorage
 function initializeDropdown() {
     const storedValue = localStorage.getItem('selectedValue');
     if (storedValue) {
         document.getElementById('dropdownMenu').value = storedValue;
     }
 }
-
-// Attach the event listener to the dropdown menu
 document.getElementById('dropdownMenu').addEventListener('change', updateValue);
-
-// Initialize the dropdown when the page loads
 initializeDropdown();
 </script>
 
