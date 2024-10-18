@@ -69,19 +69,20 @@
 	}
 
 	@media (max-width: 1200px) and (min-height: 760px){
-	.b-sprint__clock {margin-top: -0.5%;margin-left:-0.5%;}
+	.b-sprint__clock {margin-top: -0.5%;margin-left:-0.2%;}
 	.container-fluid{margin-left:0px;margin-right:0px;}
 	}
 
     @media (max-width: 1000px) and (min-height: 600px){
 	.container-fluid{width:100%;}
 	.b-sprint__body{margin-bottom: 20%;}
+	.b-sprint__clock {margin-left:-1.2%;}
 	#StartButton{transform: scale(1.5);top: 20px;margin-left: 50px;}
 	#sprint-game {margin: 20px;margin-top: 20%;transform: scale(1.6)}
 	#sprint-game2 {margin: 20px;margin-top: 17%;transform: scale(1.6)}	
 	}
 	@media (max-width: 900px) and (min-height: 1150px) {
-    .b-sprint__clock {margin-top: -4%;}
+    .b-sprint__clock {margin-top: -4%;margin-left:-2.5%;}
 	}
 	
   </style>
@@ -242,8 +243,8 @@
     <div class="container-fluid header-box"> 
 	<div class="under-title">
 <div class="show-button-2">
- <button class="btn btn-lg button-primary show_translations_js">Show Vocabulary</button>
-  <button class="btn btn-lg button-primary show_qr_js">Show QR code</button> 
+ <button class="btn btn-lg button-primary show_translations_js" style="min-width:236px;">Show Vocabulary</button>
+  <button class="btn btn-lg button-primary show_qr_js" style="min-width:236px;">Show QR code</button> 
 </div>
 <p align="center" class="translations_js"> <img src="./animals-media/vocabulary.png" alt="puzzle_yes" width="90%" height="auto" class="aligncenter"></p>
 
