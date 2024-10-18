@@ -62,9 +62,7 @@
   margin-right: auto;
 }
 
-.container-fluid-2{
 
-}
 .img-fluid {
     Position: relative;
 	width: 100px;
@@ -95,15 +93,6 @@
 	background: transparent;
 }
 
-.img-title {
-	Display:block;
-	position: relative;
-    width: 80%;
-    height: auto;
-	background: transparent;
-	
-	
-}
 
 .redesign-header__menu-item_js_hover {
 

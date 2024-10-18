@@ -472,8 +472,8 @@ var PuzzleSprint = {
         break;
 
       case 'right':
-        startAngle = '331';
-        endAngle = '33';
+        startAngle = '30';
+        endAngle = '30';
         break;
 
       default:
@@ -483,7 +483,7 @@ var PuzzleSprint = {
     }
 
     newElem.css({
-      position: 'fixed',
+      position: 'absolute',
       zIndex: '9999',
       transform: 'scale(1.5)',
       left: elem.offset().left,
@@ -1142,8 +1142,8 @@ var PuzzleSprint2 = {
         break;
 
       case 'right':
-        startAngle = '331';
-        endAngle = '33';
+        startAngle = '30';
+        endAngle = '30';
         break;
 
       default:
@@ -1151,9 +1151,9 @@ var PuzzleSprint2 = {
         endAngle = '331';
         break;
     }
-
+    /* animated points*/
     newElem.css({
-      position: 'fixed',
+      position: 'absolute',
       zIndex: '9999',
       transform: 'scale(1.5)',
       left: elem.offset().left,
@@ -1199,7 +1199,7 @@ var PuzzleSprint2 = {
 
  
 
-  /**
+  /*
    * Загружаем новые слова
    * @param isNeedLoad - true: обязательно загрузить слова, если это не рус данетка
    * @returns {boolean}

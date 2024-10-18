@@ -29,7 +29,7 @@
        logged_in: true,
       };
     </script>
-
+	
     
 	
 <script type="text/javascript" src="./files/script.js"></script>
@@ -40,15 +40,20 @@
 <script type="text/javascript" src="./files/library-animals.js"></script>
  
 
-<link rel="stylesheet" type="text/css" href="./files/style.css">	  
+<link rel="stylesheet" type="text/css" href="./files/style.css"> 
 <link rel="stylesheet" type="text/css" href="./files/style(2).css">	
 <link rel="stylesheet" type="text/css" href="./files/style(3).css">	
 <link rel="stylesheet" type="text/css" href="./files/style(4).css">	
 
 <style>
-
-@media (min-height: 1px) and (max-width: 1200px) {
-     #StartButton{top: 10px;}
+    .btn{align-items:center;display:absolute;text-decoration-line:none}.btn:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}
+	.btn-lg{color:#fff;font-size:1.125rem;height:4rem;min-height:4rem;padding-left:1.5rem;padding-right:1.5rem}
+	.button-primary{--tw-border-opacity:1;--tw-bg-opacity:1;background-color:rgb(20 163 181/var(--tw-bg-opacity));border-color:rgb(19 124 138/var(--tw-border-opacity));border-width:1px;font-weight:600;text-transform:uppercase}
+	.btn.btn-primary:hover,
+	.button-primary:hover{--tw-border-opacity:1;--tw-bg-opacity:1;background-color:rgb(121 193 119/var(--tw-bg-opacity));border-color:rgb(90 145 89/var(--tw-border-opacity))}
+    .l-wrapper{margin-top:-20px;}
+	@media (min-height: 1px) and (max-width: 1200px) {
+    #StartButton{top: 10px;}
     .puzzle-subheader{margin-top:5px;}
     .container-fluid{margin-left:-5px;margin-right:-5px;}
 	.b-game__field {height: 410px;}
@@ -63,31 +68,22 @@
 	.sidebar_points{opacity: 0;}
 	}
 
-
-	@media  (min-height: 760px) and (max-width: 1200px) {
+	@media (max-width: 1200px) and (min-height: 760px){
 	.b-sprint__clock {margin-top: -0.5%;margin-left:-0.5%;}
 	.container-fluid{margin-left:0px;margin-right:0px;}
 	}
 
-     @media (min-height: 600px) and (max-width: 1000px){
-	 .container-fluid{width:100%;}
+    @media (max-width: 1000px) and (min-height: 600px){
+	.container-fluid{width:100%;}
 	.b-sprint__body{margin-bottom: 20%;}
-	.show-button-2{margin-top: 10%;}
 	#StartButton{transform: scale(1.5);top: 20px;margin-left: 50px;}
 	#sprint-game {margin: 20px;margin-top: 20%;transform: scale(1.6)}
 	#sprint-game2 {margin: 20px;margin-top: 17%;transform: scale(1.6)}	
-}
+	}
+	@media (max-width: 900px) and (min-height: 1150px) {
+    .b-sprint__clock {margin-top: -4%;}
+	}
 	
-   .container-flex {
-   width: 100vh;
-      padding: 10px;
-      display: flex;
-	  justify-content: center;
-	  align-items: 
-      gap: 2px;
-	
-	  
-    }
   </style>
   
 </head>
@@ -97,10 +93,11 @@
                  <div class="redesign-header__menu">
           <div class="redesign-header__menu-content">
 		  
-            <div class="container-fluid">
+            <div class="container-fluid" style="">
+	
 			<img src="./media/logo.png" alt="" class="img-fluid-2">
 			
-              <div class="redesign-header__menu-left_upd_2" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+              <div class="redesign-header__menu-left_upd_2" itemscope="" itemtype="http://schema.org/SiteNavigationElement" style="">
 			   
 
       <li class="redesign-header__upd-menu-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ItemList">
@@ -228,34 +225,52 @@
           </div>
                </div>
 			        </div>
+                       
+<div class="undercap undercap_bg-color_blue">
 
+<div class="b-header_content__items">
+<div class="b-header_content__item m-header_content__title">
+<img id="title-picture" class="img-title" src="./animals-media/animals-title.png" alt="" background="transparent">
+</div>
+</div></div>
 
+ <div class="under-title">
+<div class="show-button-2">
+ <button class="btn btn-lg button-primary show_translations_js">Show Vocabulary</button>
+  <button class="btn btn-lg button-primary show_qr_js">Show QR code</button> 
+</div>
+<p align="center" class="translations_js"> <img src="./animals-media/vocabulary.png" alt="puzzle_yes" width="90%" height="auto" class="aligncenter"></p>
 
-   
+<p align="center" class="qr_pop_up_js"> <img src="./animals-media/qr.png" alt="puzzle_yes" width="500px" height="500px" class="aligncenter"></p>
+
+	</div>
+
+   	
 	<div class="puzzle-subheader puzzle-subheader_listening puzzle-subheader_style_lightgrey">
 	
     <div class="container-fluid header-box">
         <div class="row middle-xs center-xs start-sm">
 		
 				<div class="puzzle_va_middle">
-                                <div id="StartButton" class="puzzle-button puzzle_ta_center puzzle-button_blue2">
+                                <div id="StartButton" class="puzzle-button puzzle_ta_center puzzle-button_green2">
                                   
                                        <span id="StartSpan" class="puzzle_va_middle">Play</span>   
  
 								  								
 	<script>
 	 var button = document.getElementById('StartButton');
-	 var Span = document.getElementById('StartSpan');
+	 var span = document.getElementById('StartSpan');
 	 var scriptRunning = false;
 	 
 	 document.getElementById('StartButton').addEventListener('click', (function() {
 	 if (scriptRunning) {             
      reloadScript();  
-	 Span.textContent = 'Play';
+	 span.textContent = 'Play';
 	 scriptRunning = false;
             } else {              
                 startScript()
-				Span.textContent = 'Refresh';
+				span.textContent = 'Refresh';
+				button.className = 'puzzle-button puzzle_ta_center puzzle-button_blue2';
                 scriptRunning = true;
             }			
         }));
@@ -268,10 +283,10 @@
 				
             </div>
 			<div style="position:relative; margin-top:-5%;">
-			<div id="b-sprint__clock" class="b-sprint__clock" onclick="refreshElement(self)">
-                <div id="b-timer" class="b-timer">
-                    <svg class="b-timer__watch-svg" data-fill="100" version="1.1" width="300px" height="300px" viewBox="0 0 600 600" text-rendering="auto">
-                        <g class="centerGroup" transform="rotate(-90, 300, 300)">
+			<div id="b-sprint__clock" class="b-sprint__clock">
+                <div id="b-timer" class="b-timer" class="z-index:0;">
+                    <svg class="b-timer__watch-svg" data-fill="100" version="1.1" viewBox="0 0 600 600" text-rendering="auto">
+                        <g class="centerGroup" transform="rotate(-90, 300, 300)" style="visibility: visible;">
 						 <circle fill="#fff" stroke="#f8d946" stroke-width="5" stroke-miterlimit="10" cx="300" cy="300" r="79.2"></circle>
                             <circle class="b-timer__watch-svg-fill" fill="#fff" stroke="#f8d946" stroke-width="70" stroke-miterlimit="10" cx="300" cy="300" r="35" stroke-dasharray="100%" style="stroke-dashoffset: 63.04%;"></circle>      
                         </g>
@@ -289,7 +304,7 @@
 		<option value="60">60</option>
         
     </select>	
-		  <span class="unit-text">Animals</span>
+		  <span class="unit-text">Review</span>
 		  </div>  
 		  
         
@@ -297,7 +312,7 @@
 </div>
 
 
-  <div class="container-fluid game-box" oncontextmenu="return false";>
+  <div class="container-fluid puzzle-sprint_main_box" oncontextmenu="return false";>
     <div class="row middle-xs center-xs start-sm " style="justify-content: center;">
 
 
@@ -312,7 +327,7 @@
 
             
 
-            <div class="b-game puzzle-sprint__main__box" data-correct="0" style="opacity: 1;">
+            <div class="b-game" data-correct="0" style="opacity: 1;">
                 <div class="b-game__field b-field">
                     <div id="word-game" class="b-field__body">
                         <div class="b-field__words puzzle-sprint__word playerSpan">
@@ -432,7 +447,7 @@ document.addEventListener('keydown', function(event) {
             </div>
 
             
- <div class="b-game puzzle-sprint__main__box" data-correct="0" style="opacity: 1;">  
+ <div class="b-game" data-correct="0" style="opacity: 1;">  
                 <div class="b-game__field b-field">
                     <div id="word-game2" class="b-field__body">
                         <div class="b-field__words puzzle-sprint2__word playerSpan">
@@ -542,27 +557,6 @@ document.addEventListener('keydown', function(event) {
  </div>
 
 
-
-
-<div class="show-button-2">
-<div style="width:50%; float:left">
-<span style="float:right;"><a class="show_translations_js clickTo-2" href=''>Show Vocabulary</a></span>
-</div>
-<div style="width:50%; float:left">
-<span style="float:left;"><a class="show_qr_js clickTo-2" href=''>Show QR code</a></span>
-</div>
-
-<p align="center" class="translations_js"> <img src="./animals-media/vocabulary.png" alt="puzzle_yes" width="100%" height="100%" class="aligncenter"></p>
-
-<p align="center" class="qr_pop_up_js"> <img src="./animals-media/qr.png" alt="puzzle_yes" width="500px" height="500px" class="aligncenter"></p>
-	</div>
-
-
-
-
-
-
-				
               <script>
                     $('.show_translations_js').on('click', function(event) {
                         event.preventDefault();

@@ -13,7 +13,10 @@
 */
 
 ;(function($){
-
+  var screenHeight = window.innerHeight;
+  var screenWidth = window.innerWidth;
+  
+  
   $.path = {};
 
   var V = {
@@ -69,7 +72,7 @@
       css.left = css.x + "px";
       css.top = css.y + "px";
       return css;
-    };
+	};
   };
 
   $.path.arc = function(params, rotate) {

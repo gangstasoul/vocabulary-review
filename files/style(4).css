@@ -570,7 +570,9 @@
     top: 50%;
     position: absolute;	
     transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0);
-
+	width:300px;
+	height:300px;
+	visibility: hidden;
 	
 }
 
