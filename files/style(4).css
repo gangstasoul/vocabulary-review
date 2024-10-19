@@ -56,7 +56,7 @@
     position: relative;
     width: 470px;
     margin: 0 auto;
-    padding-top: 42px;
+    padding-top: 0px;
 }
 
 .b-sprint .english-button_size_m {
@@ -433,12 +433,12 @@
 
 .b-sprint__sidebar_left {
     left: -120px;
-    padding-top: 60px;
+    padding-top: 18px;
 }
 
 .b-sprint__sidebar_right {
     right: -120px;
-	padding-top: 60px;
+	padding-top: 18px;
 }
 
 
