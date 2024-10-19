@@ -1486,7 +1486,7 @@ $(function() {
 	  
 	  setTimeout(function() {
 				finalAudio.play();
-            }, 500);
+            }, 1000);
     }, 
     onTick: function(timeLeft) {
       PuzzleSprint.updateTimer(timeLeft);
