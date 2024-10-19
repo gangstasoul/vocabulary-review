@@ -71,11 +71,10 @@
 
     @media (max-width: 1000px) and (min-height: 600px){
 	.container-fluid{width:100%;}
-	.b-sprint__body{margin-top: 10%;margin-bottom: 20%;}
 	
 	#StartButton{transform: scale(1.5);margin-left: 40px;}
-	#sprint-game {margin: 20px;margin-top: 12%;transform: scale(1.6)}
-	#sprint-game2 {margin: 20px;margin-top: 7%;transform: scale(1.6)}	
+	#sprint-game {margin-top: 15%;transform: scale(1.6);z-index:2;}
+	#sprint-game2 {margin-top: 28%;margin-bottom: 150px;transform: scale(1.6);z-index:1;}	
 	}
 	@media (max-width: 900px) and (min-height: 1150px) {
    
@@ -275,7 +274,7 @@
     <div class="vocabulary_item_grid vocabulary_clock_grid">
 			<div id="b-sprint__clock" class="b-sprint__clock">
                 <div id="b-timer" class="b-timer">
-                    <svg class="b-timer__watch-svg" data-fill="100" version="1.1" viewBox="0 0 600 600" text-rendering="auto">
+                    <svg class="b-timer__watch-svg" data-fill="100" version="1.1" viewBox="0 0 600 600" text-rendering="auto" style="z-index:-1;">
                         <g class="centerGroup" transform="rotate(-90, 300, 300)">
 						 <circle fill="#fff" stroke="#f8d946" stroke-width="5" stroke-miterlimit="10" cx="300" cy="300" r="79.2"></circle>
                             <circle class="b-timer__watch-svg-fill" fill="#fff" stroke="#f8d946" stroke-width="70" stroke-miterlimit="10" cx="300" cy="300" r="35" stroke-dasharray="100%" style="stroke-dashoffset: 63.04%;"></circle>      
@@ -287,7 +286,7 @@
             </div>
 	</div>
     <div class="vocabulary_item_grid vocabulary_timer_grid">
-	<div class="unit-right">
+	<div class="unit-right" style="z-index:10;">
 		  <label for="dropdownMenu" class="drop-down">Timer:</label>
     <select id="dropdownMenu" class="drop-down">
         <option value="30">30</option>
