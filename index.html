@@ -247,10 +247,12 @@
 	<div class="container-fluid">
   <div class="vocabulary_header_grid">
     <div class="vocabulary_item_grid vocabulary_play_grid">
-	<div class="puzzle_va_middle">
-                                <div id="StartButton" class="puzzle-button puzzle_ta_center puzzle-button_green2">
+	    
+                                <button id="StartButton" class="puzzle-button puzzle_ta_center puzzle-button_green2" style="z-index:10">
                                        <span id="StartSpan" class="puzzle_va_middle">Play</span>   
-							  								
+                                </button>
+        						
+	</div>
 	<script>
 	 var button = document.getElementById('StartButton');
 	 var span = document.getElementById('StartSpan');
@@ -270,9 +272,6 @@
         }));
 	
     </script>	
-                                </div>
-                            </div>							
-	</div>
     <div class="vocabulary_item_grid vocabulary_clock_grid">
 			<div id="b-sprint__clock" class="b-sprint__clock">
                 <div id="b-timer" class="b-timer">
