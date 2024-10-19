@@ -52,37 +52,34 @@
 	.btn.btn-primary:hover,
 	.button-primary:hover{--tw-border-opacity:1;--tw-bg-opacity:1;background-color:rgb(121 193 119/var(--tw-bg-opacity));border-color:rgb(90 145 89/var(--tw-border-opacity))}
     .l-wrapper{margin-top:-20px;}
+	
 	@media (min-height: 1px) and (max-width: 1200px) {
-    #StartButton{top: 10px;}
-    .puzzle-subheader{margin-top:5px;}
     .container-fluid{margin-left:-5px;margin-right:-5px;}
 	.b-game__field {height: 410px;}
 	.l-wrapper{margin-top:-30px;}
     .b-field__words {margin-top: -30px;}
-	.b-sprint__clock {margin-top: -1%;margin-left:-1%;}
-    .progressbar_wrap{margin-left:30px;}
+  
 	.b-sprint__sidebar_right {margin-right: 120px;margin-top: -3px;}
 	.b-sprint__sidebar_left {margin-left: 120px;margin-top: -3px;}
-	.b-sprint__wrapper{background:none;}
+
     .allkeys{display:none;}
 	.sidebar_points{opacity: 0;}
 	}
 
 	@media (max-width: 1200px) and (min-height: 760px){
-	.b-sprint__clock {margin-top: -0.5%;margin-left:-0.2%;}
 	.container-fluid{margin-left:0px;margin-right:0px;}
 	}
 
     @media (max-width: 1000px) and (min-height: 600px){
 	.container-fluid{width:100%;}
 	.b-sprint__body{margin-bottom: 20%;}
-	.b-sprint__clock {margin-left:-1.2%;}
-	#StartButton{transform: scale(1.5);top: 20px;margin-left: 50px;}
+	
+	#StartButton{transform: scale(1.5);margin-left: 40px;}
 	#sprint-game {margin: 20px;margin-top: 20%;transform: scale(1.6)}
 	#sprint-game2 {margin: 20px;margin-top: 17%;transform: scale(1.6)}	
 	}
 	@media (max-width: 900px) and (min-height: 1150px) {
-    .b-sprint__clock {margin-top: -4%;margin-left:-2.5%;}
+    
 	}
 	
   </style>
@@ -236,11 +233,6 @@
 </div></div>
 
 
-
-   	
-	<div class="puzzle-subheader puzzle-subheader_listening puzzle-subheader_style_lightgrey">
-	
-    <div class="container-fluid header-box"> 
 	<div class="under-title">
 <div class="show-button-2">
  <button class="btn btn-lg button-primary show_translations_js" style="min-width:236px;">Show Vocabulary</button>
@@ -251,14 +243,15 @@
 <p align="center" class="qr_pop_up_js"> <img src="./animals-media/qr.png" alt="puzzle_yes" width="500px" height="500px" class="aligncenter"></p>
 
 	</div>
-        <div class="row middle-xs center-xs start-sm">
-		
-				<div class="puzzle_va_middle">
+	
+	
+	<div class="container-fluid">
+  <div class="vocabulary_header_grid">
+    <div class="vocabulary_item_grid vocabulary_play_grid">
+	<div class="puzzle_va_middle">
                                 <div id="StartButton" class="puzzle-button puzzle_ta_center puzzle-button_green2">
-                                  
                                        <span id="StartSpan" class="puzzle_va_middle">Play</span>   
- 
-								  								
+							  								
 	<script>
 	 var button = document.getElementById('StartButton');
 	 var span = document.getElementById('StartSpan');
@@ -277,14 +270,11 @@
             }			
         }));
 	
-    </script>
-	
+    </script>	
                                 </div>
-                            </div>
-							
-				
-            </div>
-			<div style="position:relative; margin-top:-5%;">
+                            </div>							
+	</div>
+    <div class="vocabulary_item_grid vocabulary_clock_grid">
 			<div id="b-sprint__clock" class="b-sprint__clock">
                 <div id="b-timer" class="b-timer">
                     <svg class="b-timer__watch-svg" data-fill="100" version="1.1" viewBox="0 0 600 600" text-rendering="auto">
@@ -297,8 +287,9 @@
                     <div id="timer" class="b-timer__num">0</div>
                 </div>
             </div>
-			</div>
-          <div class="unit-right">
+	</div>
+    <div class="vocabulary_item_grid vocabulary_timer_grid">
+	<div class="unit-right">
 		  <label for="dropdownMenu" class="drop-down">Timer:</label>
     <select id="dropdownMenu" class="drop-down">
         <option value="30">30</option>
@@ -308,18 +299,16 @@
     </select>	
 		  <span class="unit-text">Review</span>
 		  </div>  
-		  
-        
-    </div>
-</div>
+	</div>
+  </div>
+   	</div>
 
-
-  <div class="container-fluid puzzle-sprint_main_box" oncontextmenu="return false";>
+  <div class="container-fluid puzzle-sprint_main_box" oncontextmenu="return false">
     <div class="row middle-xs center-xs start-sm " style="justify-content: center;">
 
 
 
-<div id="sprint-game" class="">
+<div id="sprint-game">
 
     <div class="l-wrapper">
         <div class="b-sprint__body">
