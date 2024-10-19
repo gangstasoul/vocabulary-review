@@ -1445,7 +1445,6 @@ $(function() {
 	  var imageElement3 = document.createElement('img');
 	  var imageElement4 = document.createElement('img');
 	  var finalAudio = new Audio('./media/finish.mp3');
-	  finalAudio.play();
 	  
 	  var clockElement = document.getElementById('b-sprint__clock');
 	  var clockElement2 = document.getElementById('b-timer');
@@ -1485,6 +1484,9 @@ $(function() {
 	  targetDiv1.appendChild(imageElement3);
 	  targetDiv2.appendChild(imageElement4);}
 	  
+	  setTimeout(function() {
+				finalAudio.play();
+            }, 500);
     }, 
     onTick: function(timeLeft) {
       PuzzleSprint.updateTimer(timeLeft);
