@@ -66,6 +66,7 @@
 
 .b-game * {
     box-sizing: border-box;
+	z-index:9;
 }
 
 .b-game__field {
@@ -216,6 +217,7 @@
     color: #fff;
     background: #ccc;
     box-shadow: inset 0 -3px 0 #bbb;
+	z-index:10;
 }
 
 .b-button_red {
