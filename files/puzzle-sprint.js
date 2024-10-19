@@ -1422,7 +1422,7 @@ $(function() {
   
   var selectedTime = document.getElementById('dropdownMenu').value;
   var timer;
-  if (selectedTime == 30){timer = 30}
+  if (selectedTime == 30){timer = 2}
   else if (selectedTime == 45){timer = 45}
   else if (selectedTime == 60){timer = 60}
   else {timer = 30};
@@ -1451,7 +1451,7 @@ $(function() {
 	  var clockElement2 = document.getElementById('b-timer');
 	  var totalResult = number1 + number2;
 	  var totalScore = document.createElement("div");
-	  totalScore.id = 'myDivId';
+	  totalScore.id = 'totalScore';
 	  totalScore.className = 'total-score';
 	  totalScore.textContent = `Total: ${totalResult}`;
 	  
