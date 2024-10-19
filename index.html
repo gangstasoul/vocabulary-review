@@ -51,7 +51,7 @@
 	.button-primary{--tw-border-opacity:1;--tw-bg-opacity:1;background-color:rgb(20 163 181/var(--tw-bg-opacity));border-color:rgb(19 124 138/var(--tw-border-opacity));border-width:1px;font-weight:600;text-transform:uppercase}
 	.btn.btn-primary:hover,
 	.button-primary:hover{--tw-border-opacity:1;--tw-bg-opacity:1;background-color:rgb(121 193 119/var(--tw-bg-opacity));border-color:rgb(90 145 89/var(--tw-border-opacity))}
-    .puzzle-sprint_main_box{margin-top:-63px;}
+    .puzzle-sprint_main_box{margin-top:-20px;}
 	
 	@media (min-height: 1px) and (max-width: 1200px) {
     .container-fluid{margin-left:-5px;margin-right:-5px;}
@@ -71,10 +71,11 @@
 
     @media (max-width: 1000px) and (min-height: 600px){
 	.container-fluid{width:100%;}
-	
+	.l-wrapper{padding-left: 2.5px;padding-right: 2.5px;}
 	#StartButton{transform: scale(1.5);margin-left: 40px;}
-	#sprint-game {margin-top: 15%;transform: scale(1.6);z-index:2;}
-	#sprint-game2 {margin-top: 28%;margin-bottom: 150px;transform: scale(1.6);z-index:1;}	
+	.b-sprint__body{transform: scale(1.6);}
+	#sprint-game {margin-top: 18%;z-index:2;}
+	#sprint-game2 {margin-top: 34%;margin-bottom: 150px;z-index:1;}	
 	}
 	@media (max-width: 900px) and (min-height: 1150px) {
    
@@ -242,8 +243,9 @@
 
 	</div>
 	
+
 	
-	<div class="container-fluid">
+	<div class="container-fluid" style="justify-content:center;max-width:950px;margin:auto;">
   <div class="vocabulary_header_grid">
     <div class="vocabulary_item_grid vocabulary_play_grid">
 	    
@@ -301,7 +303,7 @@
    	</div>
 
   <div class="container-fluid puzzle-sprint_main_box" oncontextmenu="return false">
-    <div class="row middle-xs center-xs start-sm " style="justify-content: center;">
+    <div class="row middle-xs center-xs start-sm " style="justify-content: center;gap:5px;">
 
 
 
@@ -543,7 +545,7 @@ document.addEventListener('keydown', function(event) {
  </div>
  
  </div>
-
+</div>
 
               <script>
                     $('.show_translations_js').on('click', function(event) {
