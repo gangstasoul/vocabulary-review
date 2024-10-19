@@ -13,10 +13,7 @@
 */
 
 ;(function($){
-  var screenHeight = window.innerHeight;
-  var screenWidth = window.innerWidth;
-  
-  
+ 
   $.path = {};
 
   var V = {
