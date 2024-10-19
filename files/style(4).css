@@ -37,11 +37,7 @@
 }
 
 .b-sprint__clock {
-    width: 100px;
-    text-align: center;
-    position: absolute;
-	left: 45.8%;
-
+    position: relative;
 }
 
 .b-sprint__title {
@@ -54,11 +50,6 @@
 
 .b-sprint__wrapper {
     
-    background-color: #f8f8f8;
-    padding-bottom: 0px;
-
-	
-	
 }
 
 .b-sprint__body {
@@ -435,7 +426,7 @@
     width: 100px;
     text-align: center;
     position: absolute;
-    top: 0;
+    top: 0px;
 }
 
 .b-sprint__sidebar_left {
