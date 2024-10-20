@@ -296,7 +296,6 @@ border:1px;border-width:1px;border-radius:.375rem;padding: 5px;margin-right:0px;
 .playerSpan{margin-top:-20px;!important}
 .puzzle-sprint__main__box{margin-bottom:0px;}
 .puzzle-sprint_main_box{margin-bottom:30px;}
-.drop-down {font-size:24px!important}
 
 .allkeys{margin-top:128px;}
 .keys{margin-bottom:28px;font-size:24px}
@@ -352,9 +351,9 @@ border:1px;border-width:1px;border-radius:.375rem;padding: 5px;margin-right:0px;
 	@media (max-width: 768px) {
   video {width: 100%;height: auto;}
 }
-	
+	.drop-down {font-size:32px!important}
 	.unit-right{position:absolute; float:right;}
-    .unit-text{background:#f8d946;font-size:22px;color:#c83f35!important;padding:12px 30px 13px;min-width:165px} 
+    .unit-text{background:#f8d946;font-size:28px;color:#c83f35!important;padding:12px 18px;} 
     
 	.vocabulary_header_grid {
       height: 100px;

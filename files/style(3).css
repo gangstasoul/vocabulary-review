@@ -301,7 +301,9 @@
   }
 }
 
-
+html {
+  overflow-x: visible;
+}
 
 @media (min-width: 601px) {
   .mob-vis, .mob-visible {
