@@ -1128,6 +1128,7 @@ var PuzzleSprint2 = {
     this.updateTimer($('div.b-timer__num').data('time') + addTime);
   },
 
+/* animated points*/
   elemToTarget: function(elem, target, duration, trend) {
     if (elem.length === 0) return;
 
@@ -1151,7 +1152,7 @@ var PuzzleSprint2 = {
         endAngle = '331';
         break;
     }
-    /* animated points*/
+    
     newElem.css({
       position: 'absolute',
       zIndex: '9999',
@@ -1422,10 +1423,10 @@ $(function() {
   
   var selectedTime = document.getElementById('dropdownMenu').value;
   var timer;
-  if (selectedTime == 30){timer = 30}
-  else if (selectedTime == 45){timer = 45}
-  else if (selectedTime == 60){timer = 60}
-  else {timer = 30};
+  if (selectedTime == 30){timer = 31}
+  else if (selectedTime == 45){timer = 46}
+  else if (selectedTime == 60){timer = 61}
+  else {timer = 31};
 
   SprintTimer = new Timer({
     duration: timer,
@@ -1444,16 +1445,20 @@ $(function() {
 	  var imageElement2 = document.createElement('img');
 	  var imageElement3 = document.createElement('img');
 	  var imageElement4 = document.createElement('img');
-	  var finalAudio = new Audio('./media/finish.mp3');
-	  
+	  var finalAudio = new Audio('./media/finish.mp3');	  
 	  var clockElement = document.getElementById('b-sprint__clock');
 	  var clockElement2 = document.getElementById('b-timer');
 	  var totalResult = number1 + number2;
 	  var totalScore = document.createElement("div");
+	  var wordGame = document.getElementById('word-game');
+	  var wordGame2 = document.getElementById('word-game2');
+	  
 	  totalScore.id = 'totalScore';
 	  totalScore.className = 'total-score';
-	  totalScore.textContent = `Total: ${totalResult}`;
+	  totalScore.textContent = `Total: ${totalResult}`;	  
 	  
+	  wordGame.classList.remove('b-field__body_right', 'b-field__body_wrong');
+	  wordGame2.classList.remove('b-field__body_right', 'b-field__body_wrong');	  
 	  imageElement.src = './media/Blue-team.png';
 	  imageElement_2.src = './media/Red-team.png';
 	  imageElement1.src = './media/victory.gif';
