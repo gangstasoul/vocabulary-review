@@ -257,7 +257,6 @@ var PuzzleSprint = {
 
     for (var i = Math.floor(Math.random() * puzzle_sprint_words[this.level].length); i < this.words[this.level].length; i++) {
       
-
       this.word = this.words[this.level][i];
       this.word_ind = i;
       break;
@@ -268,34 +267,42 @@ var PuzzleSprint = {
     var word = this.word.word;
 	
 	for (var i = 0; i < puzzle_sprint_words[this.level].length; i++)  {
+		puzzle_sprint_words[this.level].shown = 1;
 		var random = Math.random(); 
 		if (random < 0.7){
 		    puzzle_sprint_words[this.level][i].visible_translation = puzzle_sprint_words[this.level][i].translation; 
 	        puzzle_sprint_words[this.level][i].visible_translation2 = puzzle_sprint_words[this.level][i].fake_translation;
 		    puzzle_sprint_words[this.level][i].visible_translation3 = puzzle_sprint_words[this.level][i].fake_translation2;
+			puzzle_sprint_words[this.level][i].correct = true;	
 			} 
 		else {
 			puzzle_sprint_words[this.level][i].visible_translation = puzzle_sprint_words[this.level][i].fake_translation;
 	        puzzle_sprint_words[this.level][i].visible_translation2 = puzzle_sprint_words[this.level][i].translation;
 	        puzzle_sprint_words[this.level][i].visible_translation3 = puzzle_sprint_words[this.level][i].fake_translation2;
+			puzzle_sprint_words[this.level][i].correct = false;
 		};
-	    if (random < 0.7) {
-		    puzzle_sprint_words[this.level][i].correct = true
-		}
-	    else {
-			puzzle_sprint_words[this.level][i].correct = false
-			};
-		if(
-      Object.keys(lastWord).length > 0 //обязательно уже было слово до этого
-      && lastWord.word == this.word.word
-      && this.word.visible_translation == lastWord.visible_translation
-    ) {
 		
-	 this.nextWord(true);
-      return false;
-	
-    }
+		 if(puzzle_sprint_words[this.level].every(obj => obj['shown'] == 1))
+		 {
+		 for (var i = 0; i < puzzle_sprint_words[this.level].length; i++){
+		 puzzle_sprint_words[this.level][i].shown = 0;
+		 }
 		}
+		else if( 
+		this.word.shown == 1
+		) {	
+	    this.nextWord(true);
+        return false;	
+		}
+		
+		if(
+		Object.keys(lastWord).length > 0 //обязательно уже было слово до этого
+		&& lastWord.word == this.word.word //The same  word doesn't show up twice
+		) {
+		this.nextWord(true);
+		return false;
+		}
+			}
 		
     var visible_translation = this.word.visible_translation;
 	var visible_translation2 = this.word.visible_translation2;
@@ -938,35 +945,43 @@ var PuzzleSprint2 = {
     var randomIndex = Math.floor(Math.random() * puzzle_sprint_words2[this.level].length);
     var word = this.word.word;
 	
-    	for (var i = 0; i < puzzle_sprint_words2[this.level].length; i++)  {
+	for (var i = 0; i < puzzle_sprint_words2[this.level].length; i++)  {
+		puzzle_sprint_words2[this.level].shown = 1;
 		var random = Math.random(); 
 		if (random < 0.7){
 		    puzzle_sprint_words2[this.level][i].visible_translation = puzzle_sprint_words2[this.level][i].translation; 
 	        puzzle_sprint_words2[this.level][i].visible_translation2 = puzzle_sprint_words2[this.level][i].fake_translation;
 		    puzzle_sprint_words2[this.level][i].visible_translation3 = puzzle_sprint_words2[this.level][i].fake_translation2;
+			puzzle_sprint_words2[this.level][i].correct = true;	
 			} 
 		else {
 			puzzle_sprint_words2[this.level][i].visible_translation = puzzle_sprint_words2[this.level][i].fake_translation;
 	        puzzle_sprint_words2[this.level][i].visible_translation2 = puzzle_sprint_words2[this.level][i].translation;
 	        puzzle_sprint_words2[this.level][i].visible_translation3 = puzzle_sprint_words2[this.level][i].fake_translation2;
+			puzzle_sprint_words2[this.level][i].correct = false;
 		};
-	    if (random < 0.7) {
-		    puzzle_sprint_words2[this.level][i].correct = true
-		}
-	    else {
-			puzzle_sprint_words2[this.level][i].correct = false
-			};
-		if(
-      Object.keys(lastWord).length > 0 //обязательно уже было слово до этого
-      && lastWord.word == this.word.word
-      && this.word.visible_translation == lastWord.visible_translation
-    ) {
 		
-	 this.nextWord(true);
-      return false;
-	
-    }
+		 if(puzzle_sprint_words2[this.level].every(obj => obj['shown'] == 1))
+		 {
+		 for (var i = 0; i < puzzle_sprint_words2[this.level].length; i++){
+		 puzzle_sprint_words2[this.level][i].shown = 0;
+		 }
 		}
+		else if( 
+		this.word.shown == 1
+		) {	
+	    this.nextWord(true);
+        return false;	
+		}
+		
+		if(
+		Object.keys(lastWord).length > 0 //обязательно уже было слово до этого
+		&& lastWord.word == this.word.word //The same  word doesn't show up twice
+		) {
+		this.nextWord(true);
+		return false;
+		}
+			}
 
     var visible_translation = this.word.visible_translation;
 	var visible_translation2 = this.word.visible_translation2;
@@ -1426,7 +1441,7 @@ $(function() {
   if (selectedTime == 30){timer = 31}
   else if (selectedTime == 45){timer = 46}
   else if (selectedTime == 60){timer = 61}
-  else {timer = 31};
+  else {timer = 61};
 
   SprintTimer = new Timer({
     duration: timer,
@@ -1439,13 +1454,12 @@ $(function() {
       var number2 = parseInt(document.getElementById('total-num2').innerText);
       var targetDiv1 = document.getElementById('finish_picture_1');
 	  var targetDiv2 = document.getElementById('finish_picture_2');
-	  var finalAudio = new Audio('./media/finish.mp3');	
-	  var imageElement = document.createElement('img');
-	  var imageElement_2 = document.createElement('img');
-      var imageElement1 = document.createElement('img');
-	  var imageElement2 = document.createElement('img');
-	  var imageElement3 = document.createElement('img');
-	  var imageElement4 = document.createElement('img');   
+	  var imageElement = Object.assign(document.createElement('img'), {src: window['STATIC_HOME'] + '/Blue-team.png', height: 150});
+	  var imageElement_2 = Object.assign(document.createElement('img'), {src: window['STATIC_HOME'] + '/Red-team.png', height: 150});
+      var imageElement1 = Object.assign(document.createElement('img'), {src: 'media/victory.gif', className: "finalGifs"});
+	  var imageElement2 = Object.assign(document.createElement('img'), {src: 'media/defeat.gif', className: "finalGifs"});
+	  var imageElement3 = Object.assign(document.createElement('img'), {src: 'media/draw.gif', className: "finalGifs"});
+	  var imageElement4 = Object.assign(document.createElement('img'), {src: 'media/draw.gif', className: "finalGifs"});  
 	  var clockElement = document.getElementById('b-sprint__clock');
 	  var clockElement2 = document.getElementById('b-timer');
 	  var totalResult = number1 + number2;
@@ -1459,19 +1473,9 @@ $(function() {
 	  
 	  wordGame.classList.remove('b-field__body_right', 'b-field__body_wrong');
 	  wordGame2.classList.remove('b-field__body_right', 'b-field__body_wrong');	
-	  finalAudio.play();
-	  imageElement.src = './media/Blue-team.png';
-	  imageElement_2.src = './media/Red-team.png';
-	  imageElement1.src = './media/victory.gif';
-	  imageElement2.src = './media/defeat.gif';
-	  imageElement3.src = './media/draw.gif';
-	  imageElement4.src = './media/draw.gif';
-	  imageElement.height = 150; 
-	  imageElement_2.height = 150;
-      imageElement1.height = 150; imageElement1.width = 350; 	  
-      imageElement2.height = 150; imageElement2.width = 350; 
-      imageElement3.height = 150; imageElement2.width = 350; 	
-      
+
+	  audio.playSound(window['STATIC_HOME'] + '/finish.mp3');
+
 	  clockElement2.parentNode.replaceChild(totalScore, clockElement2);
 
 	  spanElement.parentNode.removeChild(spanElement);
